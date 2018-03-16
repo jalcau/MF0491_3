@@ -4,6 +4,7 @@ import {MOCKS_PRODUCTOS} from '../providers/moks.productos'
 import { element } from 'protractor';
 @Injectable()
 export class ProductosService {
+  
 
   constructor() {
     console.log('ProductosService constructor');
@@ -25,7 +26,7 @@ export class ProductosService {
                       element.precio,
                       element.precio_unidad,                  
                       element.oferta,
-                      
+                      element.precio_oferta
                                                             
                       );
 

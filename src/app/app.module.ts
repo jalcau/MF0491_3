@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { ProductosService } from './providers/productos.service';
 import { AppComponent } from './app.component';
 import { SupermercadoComponent } from './supermercado/supermercado.component';
-
+ import {FormsModule} from  '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import { SupermercadoComponent } from './supermercado/supermercado.component';
     SupermercadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [ProductosService],
   bootstrap: [AppComponent]

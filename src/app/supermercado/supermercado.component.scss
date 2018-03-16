@@ -1,6 +1,6 @@
 .foto{
-    max-height: 300px;
-    max-width: 300px;
+    height: 100px;
+    width: 100px;
 }
 .container{
     background-color: black;
@@ -10,4 +10,23 @@
 .title{
     padding-left: 319px;
     font-size:1.5em;
+}
+.thumbnail{
+    height: 400px;
+    width: 150px;
+}
+.precio{
+    color:red;
+}
+.precio_unidad{
+    color:gray;
+}
+.noprecio{
+    color:black;
+}
+
+
+    
+.descuento {
+    height: 25px;
 }
