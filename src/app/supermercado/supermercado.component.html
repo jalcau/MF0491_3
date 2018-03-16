@@ -1,8 +1,8 @@
 
 <div class="container">
-  <span class="title">supermercado  <input type="search" [(ngModel)]="searchText" ></span>
+  <span class="title">supermercado  <input type="search" [(ngModel)]="searchText" ></span><span class="glyphicon glyphicon-search"></span>
 </div>
-
+{{stocks|json}}
 <br>
 <br>
 
@@ -26,9 +26,9 @@
                                     <span class="glyphicon glyphicon-minus"></span>
                                 </button>
                             </span>
-                            <input type="text" name="quant[1]" class="form-control input-number" value="1" [(ngModel)]="numero" >{{numero}}
+                            <input type="text" name="quant[1]" class="form-control input-number" value="1" [(ngModel)]="numero" >
                             <span class="input-group-btn">
-                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]" (click)="sumar(numero )">
+                                <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]" (click)="sumar()" >
                                     <span class="glyphicon glyphicon-plus"></span>
                                 </button>
                             </span>

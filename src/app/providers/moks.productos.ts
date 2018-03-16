@@ -7,64 +7,72 @@ export class MOCKS_PRODUCTOS {
             "precio": 13.35,
             "precio_unidad" :"18.50 €/Litro",
             "oferta": true,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             
             "nombre": "Agua mineral procedente del rio Ebro 33cl",
             "foto": "assets/imgs/agua.jpg",
             "precio": 3.15,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"1 €/Litro",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/garbanzos.jpg",
             "nombre": "Garbanzos de Asturias 500gr",
             "precio": 4.35,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"0.85 €/gramo",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/lentejas.jpg",
             "nombre": "Lentejas ASturiana 500gr",
             "precio": 4.35,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"0.75 €/gramo",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/macarrones.jpg",
             "nombre": "macarrones marca DIA",
             "precio": 2.35,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"0.90 €/gramo",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/martini.jpg",
             "nombre": "Martini  ingles botella 70cl",
             "precio": 7.45,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"13.50 €/Litro",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/pan.jpg",
             "nombre": "Barra de pan de molde 250gr",
             "precio": 0.75,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"0.50 €/gramo",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/ram.jpg",
             "nombre": "leche desnatada Ram 500ml",
             "precio": 3.85,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"1.50 €/Litro",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/vino.jpg",
@@ -72,15 +80,17 @@ export class MOCKS_PRODUCTOS {
             "precio": 8.90,
             "precio_unidad" :"18.50 €/Litro",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/vozka.jpg",
             "nombre": "Vozka Ruso botella 70cl",
             "precio": 11.85,
-            "precio_unidad" :"18.50 €/Litro",
+            "precio_unidad" :"14.50 €/Litro",
             "oferta": true,
-            "precio_oferta": 10.15
+            "precio_oferta": 10.15,
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/yogures.jpg",
@@ -88,7 +98,8 @@ export class MOCKS_PRODUCTOS {
             "precio": 4.25,
             "precio_unidad" :"18.50 €/Litro",
             "oferta": false,
-            "precio_oferta": 12.95
+            "precio_oferta": 12.95,
+            "cantidad":1
         }
 
        

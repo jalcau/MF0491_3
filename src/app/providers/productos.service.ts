@@ -26,7 +26,8 @@ export class ProductosService {
                       element.precio,
                       element.precio_unidad,                  
                       element.oferta,
-                      element.precio_oferta
+                      element.precio_oferta,
+                      element.cantidad
                                                             
                       );
 
