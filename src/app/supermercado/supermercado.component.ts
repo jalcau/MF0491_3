@@ -11,7 +11,7 @@ export class SupermercadoComponent implements OnInit {
   stocks : Array<Producto>;
   numero:number;
   searchText:string;
-  
+  productoSelec: Producto;
 
   constructor(public productosService:ProductosService) {
     console.log("SupermercadoComponent Constructor");
@@ -29,9 +29,9 @@ export class SupermercadoComponent implements OnInit {
 
   }
 
-  sumar(){
-    this.numero=this.numero+1;
-    console.log("%i",this.numero);
+  sumar(productoSelec:Producto){
+    //this.numero=this.numero+1;
+    console.log("%s",productoSelec.cantidad);
   }
  restar(){
    this.numero=this.numero -1;
