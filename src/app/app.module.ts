@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FilterProductos} from './pipes/filter-productos.pipes'
 import { ProductosService } from './providers/productos.service';
 import { AppComponent } from './app.component';
 import { SupermercadoComponent } from './supermercado/supermercado.component';
@@ -9,7 +9,8 @@ import { SupermercadoComponent } from './supermercado/supermercado.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SupermercadoComponent
+    SupermercadoComponent,
+    FilterProductos
   ],
   imports: [
     BrowserModule,
