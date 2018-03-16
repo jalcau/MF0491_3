@@ -1,3 +1,18 @@
+
+<div class="container">
+  <span class="title">supermercado</span>
+</div>
+
 <p>
   supermercado works!
+  {{stocks |json}}
 </p>
+
+  <nav aria-label="Catalogo de Productos">
+    <ul class="pagination">
+        <li *ngFor="let producto of stocks">
+            <a> <img class="foto" src="{{producto.foto}}" alt=""></a>
+          </li>  
+    </ul>
+</nav>
+

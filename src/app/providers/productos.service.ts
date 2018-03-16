@@ -21,8 +21,11 @@ export class ProductosService {
     producto = new Producto( 
                        
                       element.nombre, 
-                      element.foto,                     
+                      element.foto,  
+                      element.precio,
+                      element.precio_unidad,                  
                       element.oferta,
+                      
                                                             
                       );
 
@@ -32,8 +35,8 @@ export class ProductosService {
 
 return productos;
 }
-
 }
+
 
 
 
