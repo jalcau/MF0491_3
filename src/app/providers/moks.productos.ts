@@ -90,7 +90,7 @@ export class MOCKS_PRODUCTOS {
             "precio_unidad" :"14.50 €/Litro",
             "oferta": true,
             "precio_oferta": 10.15,
-            "cantidad":2
+            "cantidad":1
         },
         {
             "foto": "assets/imgs/yogures.jpg",

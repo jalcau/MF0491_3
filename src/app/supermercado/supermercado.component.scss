@@ -2,18 +2,20 @@
     height: 100px;
     width: 100px;
 }
-.container{
-    background-color: black;
-    margin-left: 0px;
-    margin-right: 0px;
-}
+
 .title{
-    padding-left: 319px;
-    font-size:1.5em;
+    color:white;
+    font-size:1.2em;
+    position: absolute;
+    margin-left: 300px;
 }
 .thumbnail{
     height: 400px;
     width: 150px;
+}
+.buscador{
+    margin-left:10px;
+    color:black
 }
 .precio{
     color:red;
@@ -23,10 +25,25 @@
 }
 .noprecio{
     color:black;
+    //font-weight: bold;
 }
 
 
     
 .descuento {
-    height: 25px;
+    margin-top: -299px;
+    margin-left: -117px;
+    height: 39px;
+}
+.tacahado{
+    text-decoration:line-through;
+    color:black;
+    //font-weight: bold;
+}
+.notachado{
+    font-weight: bold;
+}
+.carrito{
+    background-color: green;
+    width: 200px;
 }
