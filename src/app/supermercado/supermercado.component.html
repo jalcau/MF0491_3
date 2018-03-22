@@ -1,21 +1,21 @@
 <div class="container-fluid">
   <nav class="navbar navbar-inverse">
-      <a class="navbar-brand" href="#">SUPERMERCADO</a>
-      <input type="text" class="buscador" aria-describedby="basic-addon2" placeholder="Buscar en Supermercado.." [(ngModel)]="searchText">
-      <button class="btn btn-default" type="submit">
-        <i class="glyphicon glyphicon-search"></i>
-      </button>
-      <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="badge">{{cantCarrito}}</span>
-              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              <span class="total-navegador">{{total | number:'.2-2'}} €</span>
-            </a>
-            </li>
-            </ul>
-            
-            
+    <a class="navbar-brand" href="#">SUPERMERCADO</a>
+    <input type="text" class="buscador" aria-describedby="basic-addon2" placeholder="Buscar en Supermercado.." [(ngModel)]="searchText">
+    <button class="btn btn-default" type="submit">
+      <i class="glyphicon glyphicon-search"></i>
+    </button>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span class="badge">{{cantCarrito}}</span>
+          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+          <span class="total-navegador">{{total | number:'.2-2'}} €</span>
+        </a>
+      </li>
+    </ul>
+
+
   </nav>
 </div>
 <!--Final container-fluid-->
@@ -42,8 +42,7 @@
 
             <div class="input-group">
               <span class="input-group-btn">
-                <button type="button" class="btn btn-default btn-number"  data-type="minus" data-field="quant[1]"
-                  (click)="restar(producto)">
+                <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]" (click)="restar(producto)">
                   <span class="glyphicon glyphicon-minus"></span>
                 </button>
               </span>
@@ -62,24 +61,27 @@
           <button type="button" class="btn btn-success" (click)="IrCarrito(producto)">Añadir al carrito</button>
         </div>
       </div>
-     
-  </div>
 
-</div>
-<!--Final div col-->
+    </div>
+
+  </div>
+  <!--Final div col-->
 
   <div class="col-sm-4">
     <li *ngFor="let producto of carrito">
-  <!-- llamada componente Hijo -->
-  <app-carrito [productoUnido]="producto"></app-carrito>
+      <!-- llamada componente Hijo -->
+      <app-carrito [productoUnido]="producto"
+      (productoSuma)="sumarProducto($event)"
+      (productoResta)="restarProducto($event)"
+      (productoEliminado)="EliminarProducto($event)">
+    </app-carrito>
+    </li>
 
-</li>
 
 
-  
-  <!--<app-carrito [index]="indice"></app-carrito>-->
+    <!--<app-carrito [index]="indice"></app-carrito>-->
   </div>
-<!--Fin del div 2 columnas-->
+  <!--Fin del div 2 columnas-->
 
 
 

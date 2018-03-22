@@ -2,14 +2,14 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Producto } from '../model/producto';
 import { ProductosService } from '../providers/productos.service';
 import { NgModel } from '@angular/forms';
-import {ProductoCarrito} from '../model/producto_carrito'
+import { ProductoCarrito } from '../model/producto_carrito'
 @Component({
   selector: 'app-supermercado',
   templateUrl: './supermercado.component.html',
   styleUrls: ['./supermercado.component.scss']
 })
 export class SupermercadoComponent implements OnInit {
-  @Input() index:Number;
+  @Input() index: Number;
   stocks: Array<Producto>;
   cantidad: number;
   searchText: string;
@@ -24,9 +24,9 @@ export class SupermercadoComponent implements OnInit {
     console.log("SupermercadoComponent Constructor");
     this.stocks = new Array<Producto>();
     this.cantidad = 1;
-    this.carrito=[];
-    this.cantCarrito=0;
-    this.total=0;
+    this.carrito = [];
+    this.cantCarrito = 0;
+    this.total = 0;
   }
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class SupermercadoComponent implements OnInit {
   sumar(productoSelec: Producto, index) {
     //this.numero=this.numero+1;
     productoSelec.cantidad = productoSelec.cantidad + 1;
-    console.log("%s %s" ,productoSelec.cantidad ,index);
+    console.log("%s %s", productoSelec.cantidad, index);
 
   }
   restar(productoSelec: Producto) {
@@ -50,16 +50,71 @@ export class SupermercadoComponent implements OnInit {
       console.log("%s", productoSelec.cantidad);
 
     }
+   
 
-  }
+    }
 
-  IrCarrito(productoSelec: Producto): void{
-   // console.log('SupermercadoComponent.irCarrito(%o),event');
-    this.productoCarrito=new ProductoCarrito(productoSelec, productoSelec.cantidad)
-    console.log('Producto carrito %o',this.productoCarrito);
-   // this.productoCarrito=producto;
+    sumarProducto(event){
+      console.log('SupermercadoComponent.incremCarrito(%o)', event.producto);
+
+      this.aumCarrito(event.producto, 1);
+      this.cantCarrito++;
+    }
+    aumCarrito(producto: Producto, unidades: number): void {
+      
+      if (producto.oferta) {
+        this.total +=+ producto.precio_oferta * unidades;
+      }
+      else{
+      this.total += + producto.precio * unidades;
+      }
+      // tslint:disable-next-line:no-console
+      console.debug(`
+        subtotal: ${producto.precio * unidades} \n
+       
+        total: ${this.total}
+      `);
+    }
+    restarProducto(event){
+      console.log('SupermercadoComponent.decremCarrito(%o)', event);
+
+      this.dismCarrito(event.producto, 1);
+      this.cantCarrito--;
+    }
+
+    dismCarrito(producto: Producto, unidades: number): void {
+     
+  
+      console.log("%s",unidades);
+      if (producto.oferta) {
+        this.total -= producto.precio_oferta * unidades;
+      }
+      else{
+        this.total -= producto.precio * unidades;
+      }
+      
+      
+      console.debug(`
+        subtotal: ${producto.precio * unidades} \n
+        total: ${this.total}
+      `);
+    }
+   
+    EliminarProducto(event): void {
+      console.log('SupermercadoComponent.deleteFromCart(%o)', event.producto);
+  
+      this.dismCarrito(event.producto, event.unidades);
+      this.cantCarrito -= 1 * event.producto.unidades;
+    }
+  
+
+  IrCarrito(productoSelec: Producto): void {
+    // console.log('SupermercadoComponent.irCarrito(%o),event');
+    this.productoCarrito = new ProductoCarrito(productoSelec, productoSelec.cantidad)
+    console.log('Producto carrito %o', this.productoCarrito);
+    // this.productoCarrito=producto;
     //this.indice=index;
-    
+
     this.carrito.push(this.productoCarrito);
     this.cantCarrito += 1 * productoSelec.cantidad;
     this.total += + productoSelec.precio * productoSelec.cantidad;
