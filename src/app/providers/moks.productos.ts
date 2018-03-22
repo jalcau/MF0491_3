@@ -7,7 +7,7 @@ export class MOCKS_PRODUCTOS {
             "precio": 13.35,
             "precio_unidad" :"18.50 €/Litro",
             "oferta": true,
-            "precio_oferta": 12.95,
+            "precio_oferta": 12.45,
             "cantidad":1
         },
         {
@@ -89,7 +89,7 @@ export class MOCKS_PRODUCTOS {
             "precio": 11.85,
             "precio_unidad" :"14.50 €/Litro",
             "oferta": true,
-            "precio_oferta": 10.15,
+            "precio_oferta": 10.95,
             "cantidad":1
         },
         {

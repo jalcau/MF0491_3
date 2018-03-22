@@ -3,12 +3,10 @@
     width: 100px;
 }
 
-.title{
-    color:white;
-    font-size:1.2em;
-    position: absolute;
-    margin-left: 300px;
+.navbar-brand{
+    margin-right: -127px;
 }
+
 .thumbnail{
     height: 400px;
     width: 150px;
@@ -46,4 +44,10 @@
 .carrito{
     background-color: green;
     width: 200px;
+}
+
+li{ list-style:none;}
+.buscador
+{
+    width: 400px;
 }

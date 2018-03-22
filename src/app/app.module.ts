@@ -5,12 +5,15 @@ import { ProductosService } from './providers/productos.service';
 import { AppComponent } from './app.component';
 import { SupermercadoComponent } from './supermercado/supermercado.component';
  import {FormsModule} from  '@angular/forms';
+import { CarritoComponent } from './supermercado/carrito/carrito.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SupermercadoComponent,
-    FilterProductos
+    FilterProductos,
+    CarritoComponent,
+    
   ],
   imports: [
     BrowserModule,
