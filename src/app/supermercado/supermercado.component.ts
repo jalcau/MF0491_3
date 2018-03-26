@@ -104,7 +104,7 @@ export class SupermercadoComponent implements OnInit {
       console.log('SupermercadoComponent.deleteFromCart(%o)', event.producto);
   
       this.dismCarrito(event.producto, event.unidades);
-      this.cantCarrito -= 1 * event.producto.unidades;
+      this.cantCarrito -= 1 * event.unidades;
     }
   
 
@@ -114,11 +114,18 @@ export class SupermercadoComponent implements OnInit {
     console.log('Producto carrito %o', this.productoCarrito);
     // this.productoCarrito=producto;
     //this.indice=index;
-
+    
     this.carrito.push(this.productoCarrito);
     this.cantCarrito += 1 * productoSelec.cantidad;
+    if(productoSelec.oferta)
+    {
+      this.total +=+ productoSelec.precio_oferta * productoSelec.cantidad;
+      productoSelec.cantidad = 1;
+    }
+    else{   
     this.total += + productoSelec.precio * productoSelec.cantidad;
     productoSelec.cantidad = 1;
+  }
   }
 
 }
